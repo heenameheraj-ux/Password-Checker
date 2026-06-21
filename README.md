@@ -58,4 +58,10 @@ We never log, store, or save any password you type — checked or not.
 
 Backend: Node.js + Express
 Frontend: Plain HTML, CSS, JavaScript (no framework needed)
-External API: Have I Been Pwned — Pwned Passwords API (free, no API key required)
+External API: Have I Been Pwned — Pwned Passwords API (free, no API key required) 
+
+🎯 Why This Matters
+
+This project directly addresses a real, common security risk: password reuse. Data breaches happen constantly — when a site you signed up for years ago gets hacked, your password from that signup may now be public. If you reused that password anywhere else, those other accounts are now at risk too, even though they were never hacked themselves.
+
+PassCheck makes it dead simple for anyone — not just developers — to check this in seconds.
