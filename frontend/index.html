@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PassCheck | Is Your Password Safe?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="lock-icon">🔒</span>
+      <span class="brand-text">PassCheck</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#checker" class="nav-link active">Checker</a></li>
+      <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+      <li><a href="#tips" class="nav-link">Safety Tips</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="hero">
+      <h1>Is your password <span class="highlight">safe</span>?</h1>
+      <p class="subtitle">
+        Check if your password has appeared in known data breaches —
+        without ever sending your actual password over the internet.
+      </p>
+    </section>
+    <section id="checker" class="checker-section">
+      <div class="checker-card">
+        <label for="passwordInput">Enter a password to check</label>
+        <div class="input-row">
+          <input
+            type="password"
+            id="passwordInput"
+            placeholder="Type a password..."
+            autocomplete="off"
+          />
+          <button id="toggleVisibility" type="button" title="Show/Hide password">👁️</button>
+        </div>
+        <button id="checkBtn">Check Password</button>
+ 
+        <div id="resultBox" class="result-box hidden">
+          
+        </div>
+ 
+        <div id="strengthBox" class="strength-box hidden">
+          
+        </div>
+      </div>
+    </section>
+ 
+   
+    <section id="how-it-works" class="info-section">
+      <h2>🔍 How does this work?</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>1. We hash it</h3>
+          <p>Your password is converted into a scrambled SHA-1 code. The real password never leaves our server.</p>
+        </div>
+        <div class="info-card">
+          <h3>2. We send a tiny fragment</h3>
+          <p>Only the first 5 characters of that scrambled code are sent to the breach database — never enough to reveal your password.</p>
+        </div>
+        <div class="info-card">
+          <h3>3. We compare locally</h3>
+          <p>The database sends back hundreds of possible matches. We check, on our own server, if yours is among them.</p>
+        </div>
+        <div class="info-card">
+          <h3>4. You get your answer</h3>
+          <p>You find out instantly if that password has shown up in a known leak — and how many times.</p>
+        </div>
+      </div>
+    </section>
+ 
+    
+    <section id="tips" class="info-section">
+      <h2>🛡️ Quick Safety Tips</h2>
+      <ul class="tips-list">
+        <li>Never reuse the same password across multiple important accounts (email, banking, social media).</li>
+        <li>Use a password manager so you don't have to remember dozens of unique passwords.</li>
+        <li>Turn on two-factor authentication (2FA) wherever it's offered.</li>
+        <li>If a password shows up as breached, change it immediately — everywhere you've used it.</li>
+        <li>Longer passwords (12+ characters) are generally safer than short, "complex-looking" ones.</li>
+      </ul>
+    </section>
+ 
+  </main>
+ 
+  <footer>
+    <p>Built for the Creative Showcase Hackathon · Powered by the free Have I Been Pwned Pwned Passwords API · Your password is never stored or logged.</p>
+  </footer>
+ 
+  <script src="app.js"></script>
+</body>
+</html>
